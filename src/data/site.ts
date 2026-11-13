@@ -4,6 +4,7 @@ export const site = {
   description: 'I build thoughtful digital experiences and accessible learning systems.',
   location: 'Pune, India',
   github: 'https://github.com/InKunalMahajan',
+  linkedin: 'https://www.linkedin.com/in/inkunalmahajan/',
   email: '', // Add a public contact email when ready.
 };
 
