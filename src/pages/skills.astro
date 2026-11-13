@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const groups=[{name:'Development',items:['Laravel','PHP','MySQL','Astro','Tailwind CSS','TypeScript','Git & GitHub']},{name:'Education',items:['Curriculum Design','Accessible Learning','ISL-first Teaching','Assessment Design','Digital Skills Training']},{name:'Exploring',items:['Flutter','UI/UX Design','Educational Research']}];
+---
+<BaseLayout title="Skills"><section class="container-site py-24"><p class="eyebrow">Capabilities</p><h1 class="text-5xl md:text-7xl font-black mt-5">Skills<span class="text-violet">.</span></h1><p class="text-white/60 mt-6 max-w-2xl">Technologies I work with and areas I am developing.</p><div class="grid md:grid-cols-3 gap-5 mt-12">{groups.map(group=><article class="glass rounded-3xl p-7"><h2 class="text-2xl font-bold mb-6">{group.name}</h2><ul class="flex flex-wrap gap-2">{group.items.map(item=><li class="rounded-full border border-white/20 px-3 py-2 text-sm text-white/70">{item}</li>)}</ul></article>)}</div></section></BaseLayout>

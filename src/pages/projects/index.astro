@@ -1,0 +1,6 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import {projects} from '../../data/site';
+---
+<BaseLayout title="Projects"><section class="container-site py-24"><p class="eyebrow">Portfolio</p><h1 class="text-5xl md:text-7xl font-black mt-5">Selected work<span class="text-violet">.</span></h1><p class="text-white/60 mt-6">Projects and concepts across technology, accessibility and education.</p><div class="grid md:grid-cols-2 gap-5 mt-12">{projects.map(project=><ProjectCard project={project}/>)}</div></section></BaseLayout>

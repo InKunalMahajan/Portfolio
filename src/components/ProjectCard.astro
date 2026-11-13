@@ -1,0 +1,7 @@
+---
+import type { projects } from '../data/site';
+type Project = typeof projects[number];
+const { project } = Astro.props as {project: Project};
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<a href={`${base}/projects/${project.slug}/`} class="glass card-hover rounded-3xl p-7 flex flex-col min-h-72 group"><div class="flex justify-between items-start"><span class="eyebrow">{project.category}</span><span class="text-white/30 font-mono">{project.number}</span></div><div class="mt-auto"><h3 class="text-3xl font-bold tracking-tight group-hover:text-violet transition-colors">{project.name} ↗</h3><p class="text-white/60 mt-3 leading-relaxed">{project.summary}</p><div class="flex flex-wrap gap-2 mt-5">{project.tags.map(tag => <span class="border border-white/15 rounded-full px-3 py-1 text-xs text-white/60">{tag}</span>)}</div></div></a>

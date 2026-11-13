@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+---
+<BaseLayout title="Page not found"><section class="container-site py-32 text-center"><p class="eyebrow">404</p><h1 class="text-5xl md:text-7xl font-black mt-5">Page not found.</h1><p class="text-white/60 mt-6">The page you requested isn't here.</p><a class="inline-block text-violet font-bold mt-8" href={base+'/'}>Back to home ↗</a></section></BaseLayout>
